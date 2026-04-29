@@ -2,6 +2,8 @@ package com.uqvirtual.edu.co.proyectop2.Model;
 
 import com.uqvirtual.edu.co.proyectop2.Enums.CategoriaEvento;
 import com.uqvirtual.edu.co.proyectop2.Enums.EstadoEvento;
+import com.uqvirtual.edu.co.proyectop2.patterns.behavioral.observer.Observer;
+import com.uqvirtual.edu.co.proyectop2.patterns.behavioral.observer.Observable;
 
 
 import java.time.LocalDateTime;
@@ -140,7 +142,7 @@ public class Evento implements Observable {
     }
 
     @Override
-    public void notificarObservers(){
+    public void notificarObserver(){
         for (Observer observer : observers) {
             observer.actualizar(this, this.estado);
         }

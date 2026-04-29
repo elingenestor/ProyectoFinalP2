@@ -2,6 +2,7 @@ module com.uqvirtual.edu.co.proyectop2 {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
+    requires java.desktop;
 
 
     opens com.uqvirtual.edu.co.proyectop2 to javafx.fxml;
